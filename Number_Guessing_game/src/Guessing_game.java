@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Guessing_game {
 
@@ -14,7 +14,7 @@ public class Guessing_game {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         int numberofguess = 0;
 
@@ -28,15 +28,22 @@ public class Guessing_game {
         do {
 
             System.out.print("Enter Your Number : ");
-            userNumber = sc.nextInt();
+            userNumber = scan.nextInt();
 
             isCorrectNumber(userNumber, computerNo);
-            numberofguess++;
+            numberofguess ++;
 
-        } while (userNumber!=computerNo);
+        } while (userNumber != computerNo);
 
         System.out.println("\nYou Won te game by " + numberofguess +" "+"no of guesses!!\n");
 
-        sc.close();
+        System.out.println("Do you want to play again? (Y/N)");
+        char playAgain = scan.next().charAt(0);
+
+        if (playAgain == 'Y') {
+            game1.startGame();
+        }
+
+        scan.close();
     }
 }
