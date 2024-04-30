@@ -7,9 +7,9 @@ public class Guessing_game {
         if (userNo == computerNo) {
             System.out.println("\nCongratulations you have guessed the correct Number!!\n");
         } else if (userNo > computerNo) {
-            System.out.println("\nYour Number is Greater than Computer Number!! Guess Something Smaller!\n");
+            System.out.println("\nYour Number is Greater than the Number!! Guess Smaller Number!\n");
         } else {
-            System.out.println("\nYour Number is Smaller than Computer Number!! Guess Something Larger!\n");
+            System.out.println("\nYour Number is Smaller than the Number!! Guess Larger Number!\n");
         }
     }
 
